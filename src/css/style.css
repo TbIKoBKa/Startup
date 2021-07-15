@@ -12,6 +12,15 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   position: relative;
+  color: #555555;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -19,9 +28,14 @@ button {
   outline: 0;
   border: none;
 }
-
-button:active, button:hover, button:focus {
+button:hover {
   background-color: transparent;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
@@ -29,7 +43,6 @@ button:active, button:hover, button:focus {
   position: relative;
   width: 100%;
 }
-
 .nav__item::after {
   content: "";
   position: absolute;
@@ -43,7 +56,6 @@ button:active, button:hover, button:focus {
   background-color: #fff;
   transition: width 0.2s linear;
 }
-
 .nav__item:hover::after {
   width: inherit;
 }
@@ -70,12 +82,345 @@ button:active, button:hover, button:focus {
   border-radius: 2px;
   background-color: transparent;
   font-weight: 500;
+  color: #fff;
   transition: background-color .2s ease, color .2s ease;
 }
-
 .button:hover {
   background-color: #fff;
-  color: #555555 !important;
+  color: #c0301c !important;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section_dark {
+  background-color: #f8f8f8;
+}
+
+.section-title {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: #555555;
+  margin: 30px auto;
+}
+
+.section-subtitle {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.service-img {
+  display: inline-flex;
+  fill: #c0301c;
+  background-color: #fff;
+  border: 2px #dfdfdf solid;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  transition: fill .2s ease, background-color .2s ease;
+}
+.service-img svg {
+  padding: 20px;
+}
+.service-img:hover {
+  fill: #fff;
+  background-color: #c0301c;
+}
+
+.service-title {
+  margin: 25px 0 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.service-description {
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.5;
+}
+
+.content {
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 75px;
+}
+
+.members__inner {
+  max-height: 284px;
+  overflow: hidden;
+}
+
+.member-photo {
+  background-color: #a6a6a6;
+}
+.member-photo img {
+  transition: opacity .2s ease;
+}
+.member-photo:hover img {
+  opacity: 0.7;
+}
+.member-photo:hover .member-socs {
+  opacity: 1;
+}
+
+.member-socs {
+  opacity: 0;
+  width: fit-content;
+  position: absolute;
+  bottom: 32px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  transition: opacity .2s ease;
+}
+.member-socs svg {
+  fill: #fff;
+  padding: 6px;
+}
+.member-socs svg:hover {
+  background-color: #c0301c;
+}
+
+.member-name {
+  margin: 20px 0 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.member-position {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+}
+
+.members__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 106px;
+  pointer-events: none;
+}
+
+.controls__button {
+  pointer-events: initial;
+  width: 35px;
+  height: 38px;
+  fill: #fff;
+  background-color: #aaaaaa;
+}
+.controls__button:first-child {
+  transform: rotateY(180deg);
+}
+.controls__button:hover {
+  background-color: #c0301c;
+}
+
+.latestworks .section-subtitle {
+  margin-bottom: 40px;
+}
+
+.latestworks__filter-button:hover {
+  color: #c0301c;
+}
+.latestworks__filter-button.active {
+  color: #c0301c;
+}
+
+.latestworks__item {
+  margin-top: 30px;
+  position: relative;
+  background-color: #c0301c;
+  padding: 0;
+}
+.latestworks__item img {
+  transition: opacity .2s ease;
+}
+.latestworks__item:hover img {
+  opacity: 0.5;
+}
+.latestworks__item:hover .latestworks-details {
+  opacity: 1;
+}
+
+.latestworks-details {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.latestwork-name {
+  font-size: 18px;
+}
+
+.latestwork-type {
+  font-size: 12px;
+  margin: 18px 0 28px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.latestwork-button {
+  width: 100px;
+  height: 38px;
+  font-family: 'Roboto Slab', serif;
+  color: #c0301c;
+  background-color: #fff;
+}
+.latestwork-button:hover {
+  background-color: #fff;
+}
+.latestwork-button svg {
+  fill: #c0301c;
+  position: relative;
+  top: -1px;
+  right: -3px;
+}
+
+.parallax {
+  background: url("../img/parallax.png") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.parallax h1 {
+  line-height: 1.5;
+}
+.parallax .section {
+  background-color: #c02f1c75;
+}
+
+.touchrequest-title {
+  margin-bottom: 50px;
+}
+
+.review-carousel {
+  max-width: 760px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.review-message {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.review-author {
+  font-size: 20px;
+  margin: 40px 0;
+}
+
+.radio {
+  display: none;
+}
+.radio:checked + label {
+  background-color: #c0301c;
+}
+
+.review-button {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+.info__item {
+  margin-bottom: 40px;
+}
+
+.info-row {
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
+}
+
+.inputs-row p {
+  font-size: 12px;
+  white-space: normal;
+}
+
+.input-text {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: 44px !important;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+}
+
+input, textarea {
+  display: block;
+  padding: 16px 16px;
+  border: 1px #555555 solid;
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #c0301c;
+}
+
+.inputs-row, textarea {
+  max-width: 730px !important;
+}
+
+textarea {
+  display: block;
+  resize: none;
+  margin: 0;
+  height: 104px;
+  width: 100%;
+}
+
+.footer {
+  background-color: #c0301c;
+  color: #fff;
+}
+.footer .section-title::after {
+  background-color: #fff;
+}
+.footer .section-subtitle {
+  margin: 0;
+}
+
+.socials__item {
+  width: 35px;
+  height: 35px;
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+.socials__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 3px 0;
+}
+.socials__item svg {
+  fill: #fff;
+}
+.socials__item:hover {
+  background-color: #fff;
+}
+.socials__item:hover svg {
+  fill: #c0301c;
 }
 
 /*# sourceMappingURL=style.css.map */
