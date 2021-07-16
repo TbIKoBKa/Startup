@@ -11,38 +11,56 @@
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
-    <script> </script>
+    <script defer src="src/js/bootstrap.bundle.min.js"></script>
     <title>Startup</title>
 </head>
 <body class="">
     <header class="container position-absolute mt-5 start-0 end-0 d-flex justify-content-center justify-content-md-between align-items-center text-white">
         <h1 class="logo col-auto fw-bold">Startup</h1>
-        <nav class="col-auto nav d-none d-md-block">
+        <nav  class="col-auto nav d-none d-md-block">
             <ul class="nav row">
-                <li class="col text-end"><button class="nav__item py-2 text-white">Home</button></li>
-                <li class="col text-end"><button class="nav__item py-2 text-white">Services</button></li>
-                <li class="col text-end"><button class="nav__item py-2 text-white">About</button></li>
-                <li class="col text-end"><button class="nav__item py-2 text-white">Works</button></li>
-                <li class="col text-end"><button class="nav__item py-2 text-white">Blog</button></li>
-                <li class="col text-end"><button class="nav__item py-2 text-white">Clients</button></li>
-                <li class="col text-end"><button class="nav__item py-2 text-white">Contact</button></li>
+                <li class="col text-end"><a href="#home" class="nav__item py-2 text-white">Home</a></li>
+                <li class="col text-end"><a href="#services" class="nav__item py-2 text-white">Services</a></li>
+                <li class="col text-end"><a href="#about" class="nav__item py-2 text-white">About</a></li>
+                <li class="col text-end"><a href="#works" class="nav__item py-2 text-white">Works</a></li>
+                <li class="col text-end"><a href="#clients" class="nav__item py-2 text-white">Clients</a></li>
+                <li class="col text-end"><a href="#contact" class="nav__item py-2 text-white">Contact</a></li>
             </ul>
         </nav>
+        <button class="menu-toggle btn d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <div class="menu-toggle__item"></div>
+        </button>
     </header>
     <main>
-        <section class="section home vh-100 d-flex align-items-center text-white">
+        <div class="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fs-1" id="offcanvasExampleLabel">Меню</h5>
+                <button type="button" class="btn-close text-reset" aria-label="Закрыть"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav">
+                    <li><a href="#home" class="nav__item py-2 fs-3">Home</a></li>
+                    <li><a href="#services" class="nav__item py-2 fs-3">Services</a></li>
+                    <li><a href="#about" class="nav__item py-2 fs-3">About</a></li>
+                    <li><a href="#works" class="nav__item py-2 fs-3">Works</a></li>
+                    <li><a href="#clients" class="nav__item py-2 fs-3">Clients</a></li>
+                    <li><a href="#contact" class="nav__item py-2 fs-3">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <section id="home" class="section home vh-100 d-flex align-items-center text-white">
             <div class="container home__inner position-relative mx-auto text-center">
                 <h1 class="home-title mb-4">WELCOME TO STARTUP</h1>
                 <h2 class="home-subtitle">Your Favourite Creative Agency Template</h2>
                 <button class="button">GET STARTED</button>
             </div>
         </section>
-        <section class="section">
+        <section id="services" class="section">
             <div class="container">
                 <h1 class="section-title">Services</h1>
                 <h2 class="section-subtitle">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</h2>
-                <div class="row services">
-                    <article class="col-4 service__item text-center">
+                <div class="row m-0 services">
+                    <article class="col-12 col-md-4 mb-5 mb-md-0 service__item text-center">
                         <a href="#" class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 40">
                                 <path id="fa-font" class="cls-1" d="M414.735,1067.22a103.607,103.607,0,0,1,4.755,11.77c-0.491.03-.982,0.06-1.473,0.06-2.559,0-5.117-.08-7.675-0.11ZM396,1096a28.379,28.379,0,0,0,4.858-.36,8.948,8.948,0,0,1,1.24-.21c3,0,6.022.52,9.019,0.52a6.52,6.52,0,0,0,.052-0.71c0-.52,0-1.01-0.026-1.51-1.473-.2-5.272-0.28-5.272-2.29,0-.99,2.61-7.81,3.282-9.32l11.629,0.05c0.413,1.07,3.747,8.8,3.747,9.74,0,0.96-1.37,1.15-2.067,1.3l-3.386.73a18.041,18.041,0,0,0-.1,2.03c3.385-.1,6.77-0.39,10.156-0.39,3.281,0,6.563.42,9.845,0.42,0-.23.026-0.44,0.026-0.68a9.653,9.653,0,0,0-.155-1.48c-1.215-.47-3.592-0.63-4.445-1.3a4.6,4.6,0,0,1-.9-1.49c-1.292-2.65-2.2-5.44-3.36-8.15-1.964-4.58-3.747-9.24-5.685-13.85l-5.3-12.5a4.77,4.77,0,0,0-.284-0.55h-3.308l-7.236,18.85L402.2,1090.9c-1.085,2.81-3.721,2.29-6.15,3.04Z" transform="translate(-396 -1056)"/>
@@ -53,7 +71,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.
                         </p>
                     </article>
-                    <article class="col-4 service__item text-center">
+                    <article class="col-12 col-md-4 mb-5 mb-md-0 service__item text-center">
                         <a href="#" class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.812 39.76">
                                 <path id="fa-code" class="cls-1" d="M797.6,1088.72a0.927,0.927,0,0,0,0-1.33L786.254,1076l11.345-11.39a0.939,0.939,0,0,0,0-1.34l-1.444-1.44a0.916,0.916,0,0,0-1.328,0l-13.452,13.5a0.939,0.939,0,0,0,0,1.34l13.452,13.5a0.916,0.916,0,0,0,1.328,0Zm17.06-30.92a0.936,0.936,0,0,0-.635-1.16l-1.79-.5a0.926,0.926,0,0,0-1.126.64l-10.767,37.42a0.94,0.94,0,0,0,.635,1.16l1.79,0.49a0.911,0.911,0,0,0,1.126-.63Zm18.966,18.87a0.939,0.939,0,0,0,0-1.34l-13.452-13.5a0.916,0.916,0,0,0-1.328,0l-1.444,1.44a0.939,0.939,0,0,0,0,1.34L828.746,1076,817.4,1087.39a0.927,0.927,0,0,0,0,1.33l1.444,1.45a0.916,0.916,0,0,0,1.328,0Z" transform="translate(-781.094 -1056.12)"/>
@@ -64,7 +82,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.
                         </p>
                     </article>
-                    <article class="col-4 service__item text-center">
+                    <article class="col-12 col-md-4 service__item text-center">
                         <a href="#" class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 47.96">
                                 <path id="fa-support" class="cls-1" d="M1196.99,1051.87a24,24,0,1,0,24,23.99A23.989,23.989,0,0,0,1196.99,1051.87Zm0,3.42a20.734,20.734,0,0,1,9.67,2.41l-5.19,5.2a13.725,13.725,0,0,0-8.95,0l-5.19-5.2A20.725,20.725,0,0,1,1196.99,1055.29Zm-18.15,30.24a20.605,20.605,0,0,1,0-19.34l5.19,5.2a13.7,13.7,0,0,0,0,8.94Zm18.15,10.9a20.725,20.725,0,0,1-9.66-2.41l5.19-5.2a13.725,13.725,0,0,0,8.95,0l5.19,5.2A20.734,20.734,0,0,1,1196.99,1096.43Zm0-10.29a10.28,10.28,0,1,1,10.29-10.28A10.283,10.283,0,0,1,1196.99,1086.14Zm12.97-5.81a13.871,13.871,0,0,0,0-8.94l5.19-5.2a20.605,20.605,0,0,1,0,19.34Z" transform="translate(-1173 -1051.88)"/>
@@ -78,22 +96,22 @@
                 </div>
             </div>
         </section>
-        <section class="section section_dark">
+        <section id="about" class="section section_dark">
             <div class="container">
                 <h1 class="section-title">About us</h1>
                 <h2 class="section-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</h2>
                 <div class="content row">
-                    <p class="col content__item lh-base">
+                    <p class="col-12 col-sm-6 content__item lh-base">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.
                     </p>
-                    <p class="col content__item lh-base">
+                    <p class="col-12 col-sm-6 mt-3 mt-sm-0  content__item lh-base">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirtempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos eaccusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum dolor sit amet. Lorem ipsum dolor et.
                     </p>
                 </div>
                 <div class="position-relative">
-                    <div class="members__inner row justify-content-between text-center">
-                        <article class="members__item col-auto">
-                            <div class="member-photo position-relative">
+                    <div class="members__inner row h-auto justify-content-between text-center">
+                        <article class="members__item col-12 col-md-auto">
+                            <div class="member-photo position-relative mx-auto mx-md-0">
                                 <img src="./src/img/MdKhalilUddin.png" alt="Md. Khalil Uddin">
                                 <div class="member-socs">
                                     <a href="#">
@@ -121,8 +139,8 @@
                             <h3 class="member-name">Md. Khalil Uddin</h3>
                             <h4 class="member-position">Head of Ideas</h4>
                         </article>
-                        <article class="members__item col-auto">
-                            <div class="member-photo position-relative">
+                        <article class="members__item col-12 col-md-auto">
+                            <div class="member-photo position-relative mx-auto mx-md-0">
                                 <img src="./src/img/RubelMiah.png" alt="Rubel Miah">
                                 <div class="member-socs">
                                     <a href="#">
@@ -150,8 +168,8 @@
                             <h3 class="member-name">Rubel Miah</h3>
                             <h4 class="member-position">Lead WordPress Developer</h4>
                         </article>
-                        <article class="members__item col-auto">
-                            <div class="member-photo position-relative">
+                        <article class="members__item col-12 col-md-auto">
+                            <div class="member-photo position-relative mx-auto mx-md-0">
                                 <img src="./src/img/ShamimMia.png" alt="Shamim Mia">
                                 <div class="member-socs">
                                     <a href="#">
@@ -179,8 +197,8 @@
                             <h3 class="member-name">Shamim Mia</h3>
                             <h4 class="member-position">Sr. Web Developer</h4>
                         </article>
-                        <article class="members__item col-auto">
-                            <div class="member-photo position-relative">
+                        <article class="members__item col-12 col-md-auto">
+                            <div class="member-photo position-relative mx-auto mx-md-0">
                                 <img src="./src/img/JohnDoe.png" alt="John Doe">
                                 <div class="member-socs">
                                     <a href="#">
@@ -224,7 +242,7 @@
                 </div>
             </div>
         </section>
-        <section class="section latestworks">
+        <section id="works" class="section latestworks">
             <div class="container">
                 <h1 class="section-title">Latest works</h1>
                 <div class="section-subtitle row-cols-auto">
@@ -234,7 +252,7 @@
                     <button class="latestworks__filter-button col mx-3">Development</button>
                     <button class="latestworks__filter-button col mx-3">Strategy</button>
                 </div>
-                <div class="latestworks__inner row justify-content-between text-center">
+                <div class="latestworks__inner row m-0 justify-content-center justify-content-lg-between text-center">
                     <article class="latestworks__item col-auto">
                         <img src="./src/img/windy.png" alt="windy">
                         <div class="latestworks-details">
@@ -352,14 +370,14 @@
                 <button class="button">GET IN TOUCH</button>
             </div>
         </section>
-        <section class="section section_dark">
+        <section id="clients" class="section section_dark">
             <div class="container">
-                <ul class="row clients align-content-center justify-content-between">
-                    <li class="col-auto d-flex align-items-center"><img src="src/img/deorham.png" alt="deorham"></li>
-                    <li class="col-auto d-flex align-items-center"><img src="src/img/ratings.png" alt="ratings"></li>
-                    <li class="col-auto d-flex align-items-center"><img src="src/img/malikmedia.png" alt="malikmedia"></li>
-                    <li class="col-auto d-flex align-items-center"><img src="src/img/bcause.png" alt="bcause"></li>
-                    <li class="col-auto d-flex align-items-center"><img src="src/img/womgify.png" alt="womgify"></li>
+                <ul class="row clients align-content-sm-center justify-content-sm-evenly justify-content-lg-between">
+                    <li class="col-12 col-sm-auto d-flex justify-content-center align-items-center mb-4 mb-sm-0"><img src="src/img/deorham.png" alt="deorham"></li>
+                    <li class="col-12 col-sm-auto d-flex justify-content-center align-items-center mb-4 mb-sm-0"><img src="src/img/ratings.png" alt="ratings"></li>
+                    <li class="col-12 col-sm-auto d-flex justify-content-center align-items-center mb-4 mb-sm-0"><img src="src/img/malikmedia.png" alt="malikmedia"></li>
+                    <li class="col-12 col-sm-auto d-flex justify-content-center align-items-center mb-4 mb-sm-0"><img src="src/img/bcause.png" alt="bcause"></li>
+                    <li class="col-12 col-sm-auto d-flex justify-content-center align-items-center"><img src="src/img/womgify.png" alt="womgify"></li>
                 </ul>
                 <div class="review-carousel">
                     <ul class="reviews">
@@ -380,32 +398,32 @@
                 
             </div>
         </section>
-        <section class="section">
+        <section id="contact" class="section">
             <div class="container">
                 <h1 class="section-title">Get in touch</h1>
                 <h2 class="section-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</h2>
-                <div class="row justify-content-between">
-                    <div class="col-3">
+                <div class="row m-0 justify-content-between">
+                    <div class="col-12 col-sm-4 mb-4 m-sm-0 d-flex justify-content-center d-sm-block">
                         <ul class="info">
-                            <li class="info__item row">
-                                <div class="col-auto p-0 me-3"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17"><path id="fa-map-marker" class="cls-1" d="M239,5772.67a3,3,0,1,1-3-2.84A2.924,2.924,0,0,1,239,5772.67Zm3,0a6.01,6.01,0,0,0-12,0,4.423,4.423,0,0,0,.387,1.98l4.277,8.56A1.473,1.473,0,0,0,236,5784a1.506,1.506,0,0,0,1.348-.79l4.265-8.56A4.423,4.423,0,0,0,242,5772.67Z" transform="translate(-230 -5767)"/></svg></div>
-                                <div class="info-data col-auto p-0">
+                            <li class="info__item row pe-3">
+                                <div class="col-2 p-0"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17"><path id="fa-map-marker" class="cls-1" d="M239,5772.67a3,3,0,1,1-3-2.84A2.924,2.924,0,0,1,239,5772.67Zm3,0a6.01,6.01,0,0,0-12,0,4.423,4.423,0,0,0,.387,1.98l4.277,8.56A1.473,1.473,0,0,0,236,5784a1.506,1.506,0,0,0,1.348-.79l4.265-8.56A4.423,4.423,0,0,0,242,5772.67Z" transform="translate(-230 -5767)"/></svg></div>
+                                <div class="info-data col-9 p-0">
                                     <h3 class="info-title fs-6 text-uppercase">Address</h3>
                                     <p class="info-row mt-4">312, 7th Ave, New York</p>
                                     <p class="info-row mt-2">NY 101200, United States of America</p>
                                 </div>
                             </li>
-                            <li class="info__item row">
-                                <div class="col-auto p-0 me-3"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20"><path id="fa-mobile-phone" class="cls-1" d="M236.25,5885a1.25,1.25,0,1,1-1.25-1.25A1.252,1.252,0,0,1,236.25,5885Zm3.25-2.5a0.511,0.511,0,0,1-.5.5h-8a0.511,0.511,0,0,1-.5-0.5v-11a0.511,0.511,0,0,1,.5-0.5h8a0.511,0.511,0,0,1,.5.5v11Zm-3-13.25a0.247,0.247,0,0,1-.25.25h-2.5a0.25,0.25,0,0,1,0-.5h2.5A0.247,0.247,0,0,1,236.5,5869.25Zm4.5-.25a2.016,2.016,0,0,0-2-2h-8a2.016,2.016,0,0,0-2,2v16a2.016,2.016,0,0,0,2,2h8a2.016,2.016,0,0,0,2-2v-16Z" transform="translate(-229 -5867)"/></svg></div>
-                                <div class="info-data col-auto p-0">
+                            <li class="info__item row pe-3">
+                                <div class="col-2 p-0"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20"><path id="fa-mobile-phone" class="cls-1" d="M236.25,5885a1.25,1.25,0,1,1-1.25-1.25A1.252,1.252,0,0,1,236.25,5885Zm3.25-2.5a0.511,0.511,0,0,1-.5.5h-8a0.511,0.511,0,0,1-.5-0.5v-11a0.511,0.511,0,0,1,.5-0.5h8a0.511,0.511,0,0,1,.5.5v11Zm-3-13.25a0.247,0.247,0,0,1-.25.25h-2.5a0.25,0.25,0,0,1,0-.5h2.5A0.247,0.247,0,0,1,236.5,5869.25Zm4.5-.25a2.016,2.016,0,0,0-2-2h-8a2.016,2.016,0,0,0-2,2v16a2.016,2.016,0,0,0,2,2h8a2.016,2.016,0,0,0,2-2v-16Z" transform="translate(-229 -5867)"/></svg></div>
+                                <div class="info-data col-9 p-0">
                                     <h3 class="info-title fs-6 text-uppercase">Hotline (24x7)</h3>
                                     <p class="info-row mt-4">+65 0052 300, +65 88251 210</p>
                                     <p class="info-row mt-2">+88 01723 511 340</p>
                                 </div>
                             </li>
-                            <li class="info__item row mb-0">
-                                <div class="col-auto p-0 me-3"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11"><path id="fa-envelope-o" class="cls-1" d="M242.929,5977.75a0.269,0.269,0,0,1-.268.25H230.339a0.269,0.269,0,0,1-.268-0.25v-6a4.549,4.549,0,0,0,.578.52c1.2,0.85,2.4,1.73,3.566,2.64a3.987,3.987,0,0,0,2.277,1.09h0.016a3.987,3.987,0,0,0,2.277-1.09c1.164-.91,2.369-1.79,3.566-2.64a4.549,4.549,0,0,0,.578-0.52v6Zm0-8.21a3.029,3.029,0,0,1-1.231,1.93c-1.122.82-2.243,1.65-3.357,2.47a4.152,4.152,0,0,1-1.833,1.06h-0.016a4.16,4.16,0,0,1-1.834-1.06c-1.113-.82-2.235-1.65-3.356-2.47a2.774,2.774,0,0,1-1.231-2.22,0.269,0.269,0,0,1,.268-0.25h12.322C242.979,5969,242.929,5969.34,242.929,5969.54Zm1.071-.29a1.3,1.3,0,0,0-1.339-1.25H230.339a1.3,1.3,0,0,0-1.339,1.25v8.5a1.3,1.3,0,0,0,1.339,1.25h12.322a1.3,1.3,0,0,0,1.339-1.25v-8.5Z" transform="translate(-229 -5968)"/></svg></div>
-                                <div class="info-data col-auto p-0">
+                            <li class="info__item row pe-3 mb-0">
+                                <div class="col-2 p-0"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11"><path id="fa-envelope-o" class="cls-1" d="M242.929,5977.75a0.269,0.269,0,0,1-.268.25H230.339a0.269,0.269,0,0,1-.268-0.25v-6a4.549,4.549,0,0,0,.578.52c1.2,0.85,2.4,1.73,3.566,2.64a3.987,3.987,0,0,0,2.277,1.09h0.016a3.987,3.987,0,0,0,2.277-1.09c1.164-.91,2.369-1.79,3.566-2.64a4.549,4.549,0,0,0,.578-0.52v6Zm0-8.21a3.029,3.029,0,0,1-1.231,1.93c-1.122.82-2.243,1.65-3.357,2.47a4.152,4.152,0,0,1-1.833,1.06h-0.016a4.16,4.16,0,0,1-1.834-1.06c-1.113-.82-2.235-1.65-3.356-2.47a2.774,2.774,0,0,1-1.231-2.22,0.269,0.269,0,0,1,.268-0.25h12.322C242.979,5969,242.929,5969.34,242.929,5969.54Zm1.071-.29a1.3,1.3,0,0,0-1.339-1.25H230.339a1.3,1.3,0,0,0-1.339,1.25v8.5a1.3,1.3,0,0,0,1.339,1.25h12.322a1.3,1.3,0,0,0,1.339-1.25v-8.5Z" transform="translate(-229 -5968)"/></svg></div>
+                                <div class="info-data col-9 p-0">
                                     <h3 class="info-title fs-6 text-uppercase">E-mail</h3>
                                     <p class="info-row mt-4">shapedtheme@gmail.com</p>
                                     <p class="info-row mt-2">khalilkode@gmail.com</p>
@@ -413,17 +431,17 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-8 p-0">
-                        <form class="d-flex justify-content-end flex-wrap">
+                    <div class="col-12 col-sm-8 px-5 px-sm-0 ps-sm-3">
+                        <form class="d-flex justify-content-center justify-content-sm-end flex-wrap">
                             <div class="inputs-row w-100 row justify-content-between m-0 mb-4">
-                                <input type="text" class="input-text col me-3"  placeholder="YOUR NAME" name="name" required>
-                                <input type="email" class="input-text col ms-3" placeholder="YOUR E-MAIL" name="email" required>
+                                <input type="text" class="input-text col-12 col-md mb-4 mb-md-0 me-0 me-sm-3"  placeholder="YOUR NAME" name="name" required>
+                                <input type="email" class="input-text col-12 col-md ms-0 ms-md-3" placeholder="YOUR E-MAIL" name="email" required>
                             </div>
                             <div class="inputs-row w-100 row justify-content-between m-0 mb-4">
-                                <input type="text" class="input-text col me-3" placeholder="YOUR SUBJECT" name="subject">
-                                <input type="text" class="input-text col ms-3" placeholder="COMPANY NAME" name="company">
+                                <input type="text" class="input-text col-12 col-md mb-4 mb-md-0 me-0 me-sm-3" placeholder="YOUR SUBJECT" name="subject">
+                                <input type="text" class="input-text col-12 col-md ms-0 ms-md-3" placeholder="COMPANY NAME" name="company">
                             </div>
-                            <textarea name="message" id="" class="row m-0 mb-4 w-100" placeholder="WRITE YOUR MESSAGE" name="message" required></textarea>
+                            <textarea name="message" id="" class="row m-0 mb-4" placeholder="WRITE YOUR MESSAGE" name="message" required></textarea>
                             <div class="inputs-row w-100 submit row m-0 align-items-center">
                                 <input type="submit" class="col-auto" value="SEND MESSAGE">
                                 <p class="col"><span class="text-danger">*</span> We’ll contact you as as possible. We don’t reply on Monday.</p>
@@ -435,39 +453,41 @@
         </section>
     </main>
     <footer class="section footer">
-        <div class="section-title">
-            <ul class="socials row justify-content-center">
-                <li class="socials__item col-auto p-0 mx-2">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                            <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item col-auto p-0 mx-2">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                            <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item col-auto p-0 mx-2">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                            <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item col-auto p-0 mx-2">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                            <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <h2 class="section-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</h2>
+        <div class="container">
+            <div class="section-title">
+                <ul class="socials row justify-content-center">
+                    <li class="socials__item col-auto p-0 mx-2">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item col-auto p-0 mx-2">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item col-auto p-0 mx-2">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item col-auto p-0 mx-2">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                <path id="fa-twitter" class="cls-1" d="M882,6278.42a6.613,6.613,0,0,1-1.888.47,3.036,3.036,0,0,0,1.441-1.67,6.951,6.951,0,0,1-2.081.74,3.409,3.409,0,0,0-2.4-.96,3.16,3.16,0,0,0-3.279,3.03,3.115,3.115,0,0,0,.081.69,9.581,9.581,0,0,1-6.761-3.17,2.839,2.839,0,0,0-.447,1.53,2.966,2.966,0,0,0,1.462,2.52,3.6,3.6,0,0,1-1.482-.38v0.04a3.1,3.1,0,0,0,2.629,2.97,4.068,4.068,0,0,1-.863.1,4.192,4.192,0,0,1-.619-0.05,3.252,3.252,0,0,0,3.066,2.1,7.139,7.139,0,0,1-4.863,1.26,9.858,9.858,0,0,0,5.035,1.36,8.907,8.907,0,0,0,9.33-8.62c0-.13,0-0.26-0.01-0.39A6.775,6.775,0,0,0,882,6278.42Z" transform="translate(-866 -6277)"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="section-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</h2>    
+        </div>    
     </footer>
 </body>
 </html>

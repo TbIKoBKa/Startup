@@ -38,6 +38,52 @@ ul {
   padding: 0;
 }
 
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+.menu-toggle:focus {
+  box-shadow: none !important;
+}
+.menu-toggle .menu-toggle__item::before {
+  top: 6px;
+}
+.menu-toggle .menu-toggle__item::after {
+  bottom: 5px;
+}
+
+.menu-toggle__item,
+.menu-toggle__item::after,
+.menu-toggle__item::before {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.menu-toggle__item::after,
+.menu-toggle__item::before {
+  content: "";
+  position: absolute;
+}
+
+.offcanvas .nav {
+  display: block;
+}
+.offcanvas .nav li {
+  display: block;
+}
+.offcanvas .nav .nav__item {
+  width: auto;
+  color: #555555 !important;
+}
+
 .nav__item {
   font-weight: 500;
   position: relative;
@@ -63,6 +109,7 @@ ul {
 .home {
   background: url("../img/Home.png") center no-repeat;
   background-size: cover;
+  min-height: 600px;
 }
 
 .home-title {
@@ -154,11 +201,12 @@ ul {
 }
 
 .members__inner {
-  max-height: 284px;
+  max-height: 323px;
   overflow: hidden;
 }
 
 .member-photo {
+  width: fit-content;
   background-color: #a6a6a6;
 }
 .member-photo img {
@@ -238,10 +286,13 @@ ul {
 .latestworks__item {
   margin-top: 30px;
   position: relative;
+  width: auto;
   background-color: #c0301c;
   padding: 0;
 }
 .latestworks__item img {
+  height: 100%;
+  width: 100%;
   transition: opacity .2s ease;
 }
 .latestworks__item:hover img {
@@ -253,6 +304,7 @@ ul {
 
 .latestworks-details {
   position: absolute;
+  width: 100%;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -352,13 +404,11 @@ ul {
 
 .inputs-row p {
   font-size: 12px;
-  white-space: normal;
 }
 
 .input-text {
   display: block;
   width: 100%;
-  max-width: 350px;
   height: 44px !important;
 }
 
