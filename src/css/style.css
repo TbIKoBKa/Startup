@@ -40,7 +40,8 @@ ul {
 
 .menu-toggle {
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 10px;
   width: 30px;
   height: 30px;
@@ -52,16 +53,17 @@ ul {
   box-shadow: none !important;
 }
 .menu-toggle .menu-toggle__item::before {
-  top: 6px;
+  top: -8px;
 }
 .menu-toggle .menu-toggle__item::after {
-  bottom: 5px;
+  bottom: -8px;
 }
 
 .menu-toggle__item,
 .menu-toggle__item::after,
 .menu-toggle__item::before {
   display: block;
+  position: absolute;
   width: 100%;
   height: 3px;
   background-color: #fff;
@@ -70,7 +72,6 @@ ul {
 .menu-toggle__item::after,
 .menu-toggle__item::before {
   content: "";
-  position: absolute;
 }
 
 .offcanvas .nav {
@@ -82,6 +83,24 @@ ul {
 .offcanvas .nav .nav__item {
   width: auto;
   color: #555555 !important;
+}
+
+.header.fixed {
+  display: block;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, #c0301c, #e73821);
+  box-shadow: 0 0 10px #1b1b1b;
+  z-index: 1000;
+}
+.header.fixed .header__inner {
+  position: relative !important;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0 !important;
 }
 
 .nav__item {
